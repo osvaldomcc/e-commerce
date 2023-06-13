@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.newsletter {
+	background: var(--clr-primary);
+	color: var(--clr-white);
+	padding: 2em;
+	text-align: center;
+
+	&-error {
+		display: flex;
+		align-self: flex-start;
+	}
+
+	input {
+		background-color: transparent;
+		color: var(--clr-white);
+		border: 0.14em dashed whitesmoke;
+		font-family: $ff-quicksand;
+		font-weight: 100;
+		margin: 1em 0;
+		outline: none;
+
+		&::placeholder {
+			color: var(--clr-white);
+		}
+
+		&:focus {
+			border: 0.14em dashed whitesmoke;
+		}
+	}
+
+	h1 {
+		font-family: $ff-gilda;
+	}
+
+	& .btn-container {
+		margin-top: 0.5em;
+		width: 100%;
+	}
+
+	& .btn-primary {
+		padding: 0.7em 0;
+		color: var(--clr-primary);
+		border: 2px dashed var(--clr-primary);
+		width: 100%;
+
+		&:focus {
+			outline: 2px solid var(--clr-primary);
+		}
+	}
+}

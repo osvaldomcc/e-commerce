@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+
+.btn {
+	background: none;
+	border: none;
+	font-family: $ff-francoise;
+	padding: 0.5em;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+
+	&-container {
+		background: var(--clr-white);
+		padding: 0.3rem;
+		width: fit-content;
+		transition: all 0.5s;
+
+		&--primary {
+			background: var(--clr-primary);
+		}
+	}
+
+	&.btn-black {
+		font-family: $ff-quicksand;
+		background: var(--clr-black);
+		color: var(--clr-white);
+		font-weight: 100;
+		padding: 0.5em;
+		text-transform: capitalize;
+
+		&:focus {
+			outline: 1px solid var(--clr-black);
+		}
+	}
+
+	&.btn-secondary {
+		font-family: $ff-francoise;
+		background: var(--clr-white);
+		color: var(--clr-secondary);
+		font-weight: 100;
+		border: 2px dashed var(--clr-secondary);
+		font-size: fs(300);
+
+		&:focus {
+			outline: 1px solid var(--clr-secondary);
+		}
+	}
+
+	&.btn-primary {
+		font-family: $ff-francoise;
+		color: var(--clr-white);
+		font-weight: 100;
+		border: 2px dashed var(--clr-white);
+		font-size: fs(300);
+		width: 100%;
+
+		&:focus {
+			outline: 1px solid var(--clr-white);
+		}
+
+		&.filled {
+			color: var(--clr-white);
+		}
+	}
+}

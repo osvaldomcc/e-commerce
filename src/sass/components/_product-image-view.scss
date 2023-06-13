@@ -1,0 +1,17 @@
+.image-view {
+	position: relative;
+	width: 240px;
+	height: 357px;
+	display: grid;
+	place-items: center;
+}
+
+.image-view__front {
+	opacity: 1;
+	transition: opacity 0.6s;
+}
+
+.image-view__back {
+	position: absolute;
+	z-index: -1;
+}

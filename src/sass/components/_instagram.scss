@@ -1,0 +1,18 @@
+.feed {
+	margin: 10em 0;
+}
+
+.instagram {
+	display: flex;
+	gap: 1em;
+	justify-content: center;
+
+	&__image {
+		cursor: pointer;
+		transition: opacity 0.5s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

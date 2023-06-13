@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.menu__list {
+	--underline-width: 0;
+	--underline-offset-x: 0;
+
+	position: relative;
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu__list::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 0.6em;
+	bottom: -0.2em;
+	background-repeat: no-repeat;
+	width: var(--underline-width);
+	background-image: url(/images/underline.png);
+	background-size: 35px 0.8em;
+	transform: translateX(var(--underline-offset-x));
+	transition: transform 0.5s, width 0.5s;
+}
+
+.menu__link {
+	display: block;
+	padding: 0.5rem 1rem;
+	font-size: 1.05rem;
+	color: var(--clr-secondary);
+	text-decoration: none;
+	font-family: $ff-francoise;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.menu__link.active {
+	color: var(--clr-primary);
+}

@@ -1,0 +1,15 @@
+export { default as ShoppingCart } from 'sections/app/components/ShoppingCart';
+export { default as Promotion } from 'sections/app/components/Promotion';
+export { default as Navbar } from 'sections/app/components/Navbar';
+export { default as MenuSlide } from 'sections/app/components/MenuSlide';
+export { default as MainLoader } from 'sections/app/components/loaders/MainLoader';
+export { default as LazyImage } from 'sections/app/components/LazyImage';
+export { default as HomeLoader } from 'sections/app/components/loaders/HomeLoader';
+export { default as Header } from 'sections/app/components/Header';
+export { default as Footer } from 'sections/app/components/Footer';
+export { default as DetailLoader } from 'sections/app/components/loaders/DetailLoader';
+export { default as Banner } from 'sections/app/components/Banner';
+export { default as MainCategories } from 'sections/app/components/MainCategories';
+export { default as NewsLetter } from 'sections/app/components/NewsLetter';
+export { default as InstagramFeed } from 'sections/app/components/InstagramFeed';
+export { default as Gallery } from 'sections/app/components/Gallery';

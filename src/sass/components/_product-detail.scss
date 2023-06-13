@@ -1,0 +1,119 @@
+@use '../abstracts' as *;
+
+.product-detail {
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 1px dashed var(--clr-secondary-light);
+		padding: 4em 0;
+
+		h1 {
+			font-family: $ff-gilda;
+			font-size: 2.5em;
+			margin-bottom: 0.5em;
+		}
+
+		p {
+			font-family: $ff-quicksand;
+			font-weight: 700;
+
+			span {
+				color: var(--clr-primary);
+			}
+		}
+	}
+	&__related {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 2em;
+		text-align: center;
+	}
+	&__carousel {
+		width: 355px;
+		display: flex;
+		gap: 0.5em;
+		padding: 0.5em 0;
+		overflow-y: hidden;
+	}
+	&__content {
+		margin-top: 4em;
+		display: flex;
+		justify-content: center;
+		gap: 4em;
+
+		&--right {
+			margin-top: 2em;
+			width: 40em;
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+
+			span {
+				color: var(--clr-secondary);
+				font-weight: 700;
+			}
+
+			form {
+				display: flex;
+				.btn {
+					font-size: 12px;
+					padding: 0.6em 2em;
+				}
+				input {
+					width: 5em;
+					height: 3em;
+				}
+			}
+
+			.table {
+				border: 1px dashed var(--clr-secondary-light);
+
+				ul {
+					list-style: none;
+					padding: 1.5em;
+				}
+
+				h4 {
+					width: 4em;
+				}
+
+				span {
+					color: var(--clr-gray);
+				}
+
+				li {
+					border-bottom: 1px solid var(--clr-secondary-light);
+					padding: 0.5em 0;
+					font-family: $ff-quicksand;
+					display: flex;
+					align-items: center;
+					font-size: 14px;
+					display: flex;
+					gap: 4em;
+				}
+
+				li:nth-child(3) {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	&__description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2em;
+		margin: 8em 0;
+
+		p {
+			text-align: justify;
+			padding: 0 4em;
+			line-height: 2em;
+		}
+
+		a {
+			font-size: 1.3rem;
+		}
+	}
+}

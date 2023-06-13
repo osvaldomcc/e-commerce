@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	color: var(--clr-black);
+	font-family: $ff-quicksand;
+	font-size: fs(300);
+	font-weight: 500;
+
+	&.banner-primary {
+		background-color: var(--clr-primary);
+		color: var(--clr-white);
+	}
+
+	&.banner-secondary {
+		background-color: var(--clr-secondary);
+		color: var(--clr-white);
+	}
+
+	&.banner-accent {
+		background-color: var(--clr-accent);
+	}
+
+	&.banner-black {
+		background-color: var(--clr-black);
+		color: var(--clr-white);
+	}
+
+	&.banner-gray {
+		background-color: var(--clr-gray);
+		color: var(--clr-white);
+	}
+}

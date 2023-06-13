@@ -1,0 +1,17 @@
+.product-section {
+	margin: 2em 0;
+
+	&__content {
+		display: flex;
+
+		aside {
+			width: 38ch;
+		}
+
+		.product {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+@each $color, $value in $colors {
+	.text-#{$color} {
+		color: $value;
+	}
+}

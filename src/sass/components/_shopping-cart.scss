@@ -1,0 +1,19 @@
+.cart {
+	position: relative;
+	margin-right: 0.8em;
+
+	&__badge {
+		position: absolute;
+		right: -15px;
+		top: -8px;
+		background: var(--clr-primary);
+		color: var(--clr-white);
+		padding: 0.1em 0.6em;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		z-index: 1;
+	}
+}

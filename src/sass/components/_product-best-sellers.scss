@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.product-sell {
+	margin: 2em 0;
+
+	&__list {
+		margin-top: 1em;
+		border: 1px dashed var(--clr-secondary-light);
+		padding: 1.5em 1.2em;
+
+		ul {
+			list-style: none;
+
+			li {
+				display: flex;
+				font-family: $ff-quicksand;
+				font-size: fs(300);
+				font-weight: 700;
+				margin-bottom: 1em;
+
+				h5 {
+					font-size: fs(300);
+				}
+			}
+		}
+	}
+
+	&__image {
+		display: grid;
+		place-items: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 1em;
+	}
+
+	&__info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 0 1em;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-size: fs(600);
+	}
+}

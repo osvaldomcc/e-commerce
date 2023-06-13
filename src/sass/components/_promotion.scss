@@ -1,0 +1,39 @@
+.promotion {
+	display: flex;
+	gap: 3.5em;
+	justify-content: center;
+	align-items: center;
+
+	&__left {
+		position: relative;
+
+		&--content {
+			position: absolute;
+			bottom: 3em;
+			left: 2em;
+			color: var(--clr-white);
+
+			h1 {
+				font-size: 3.5rem;
+				margin-bottom: -0.2em;
+			}
+
+			p {
+				padding-bottom: 1em;
+			}
+
+			span {
+				padding: 0 1.3em;
+			}
+		}
+	}
+
+	&__right {
+		cursor: pointer;
+
+		&--content {
+			display: grid;
+			place-items: center;
+		}
+	}
+}

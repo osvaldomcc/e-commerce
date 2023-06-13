@@ -1,0 +1,85 @@
+@use 'fonts';
+@use '../abstracts' as *;
+
+:root {
+	@each $color, $value in $colors {
+		--clr-#{$color}: #{$value};
+	}
+}
+
+body {
+	min-height: 100vh;
+	color: var(--clr-secondary);
+	transition: color 0.5s, background-color 0.5s;
+	line-height: 1.6;
+	font-family: $ff-gilda;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 1px;
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	margin: auto;
+	max-width: 75em;
+	overflow: hidden;
+}
+
+h1 {
+	font-family: $ff-francoise;
+	font-size: 1.8em;
+	font-weight: 500;
+}
+
+p {
+	font-family: $ff-quicksand;
+	font-weight: 500;
+}
+
+.header-section {
+	h1 {
+		position: relative;
+		display: grid;
+		place-items: center;
+		margin-bottom: 2em;
+		font-size: 1.5rem;
+	}
+
+	h1::before {
+		content: '';
+		position: absolute;
+		left: 46.8%;
+		right: 46.8%;
+		height: 0.6em;
+		bottom: -0.6em;
+		background-repeat: no-repeat;
+		background-image: url(/images/underline.png);
+		background-size: 72px 16px;
+	}
+}
+
+input[type='text'],
+input[type='number'] {
+	border: 1px dashed lightgray;
+	padding: 1em;
+	color: var(--clr-gray);
+	font-size: fs(300);
+	font-family: $ff-quicksand;
+	width: 100%;
+	outline: none;
+
+	&:focus {
+		border: 1px dashed var(--clr-gray);
+	}
+
+	&::placeholder {
+		color: var(--clr-gray);
+	}
+}
+
+.main-loader {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
