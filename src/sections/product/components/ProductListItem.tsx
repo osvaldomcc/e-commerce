@@ -4,6 +4,7 @@ import { Product } from 'modules/poduct/domain/Product';
 import { ProductImageView, ProductRate } from 'sections/product/components';
 import { useProductContext } from 'sections/product/hooks/useProductContext';
 import { useNavigation } from 'sections/app/hooks';
+import { Notify } from 'sections/app/services';
 
 interface Props {
 	product: Product;
@@ -24,6 +25,7 @@ const ProductListItem: FC<Props> = ({ product, showRate = false }) => {
 	const handleCartOrFavorite = (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		ev.stopPropagation();
 		addToCart(product.sku);
+		if (product.stock > 0) Notify.success('Product added successfully');
 	};
 
 	return (
