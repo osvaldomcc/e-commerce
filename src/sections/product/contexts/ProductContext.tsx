@@ -102,7 +102,7 @@ const ProductProvider: FC<ComponentProps> = ({ children }) => {
 	const removeFromCart = (sku: string) => {
 		let productToRemove;
 
-		const newItems = products.map((value) => {
+		let newItems = products.map((value) => {
 			if (value.sku === sku) {
 				const updated = { ...value, stock: value.stock + 1 };
 				productToRemove = updated;
@@ -110,13 +110,14 @@ const ProductProvider: FC<ComponentProps> = ({ children }) => {
 			}
 			return value;
 		});
-		setProducts(newItems);
-
-		if (!productToRemove) return;
 
 		const itemInCart = cart?.get(sku);
 
-		if (!itemInCart) return;
+		if (!productToRemove && itemInCart) {
+			newItems = [...newItems, itemInCart.product];
+		}
+
+		setProducts(newItems);
 
 		cart?.delete(sku);
 
