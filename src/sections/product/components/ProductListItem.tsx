@@ -5,6 +5,7 @@ import { ProductImageView, ProductRate } from 'sections/product/components';
 import { useProductContext } from 'sections/product/hooks/useProductContext';
 import { useNavigation } from 'sections/app/hooks';
 import { Notify } from 'sections/app/services';
+import { formatPrice } from 'sections/app/utils/format';
 
 interface Props {
 	product: Product;
@@ -49,7 +50,7 @@ const ProductListItem: FC<Props> = ({ product, showRate = false }) => {
 			<div className='product-item__description'>
 				<span>{product.category}</span>
 				<h1>{product.name}</h1>
-				<span>${`${product.price}.00`}</span>
+				<span>{formatPrice(product.price)}</span>
 				{isOutOfStock && <span className='no-stock'>OUT OF STOCK</span>}
 				{showRate && <ProductRate rate={product.rate} />}
 			</div>

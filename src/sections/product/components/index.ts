@@ -7,3 +7,4 @@ export { default as ProductCategories } from './ProductCategories';
 export { default as ProductBestSellers } from './ProductBestSellers';
 export { default as ProductRate } from './ProductRate';
 export { default as ProductDescription } from './ProductDescription';
+export { default as ProductContent } from './ProductContent';

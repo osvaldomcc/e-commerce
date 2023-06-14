@@ -1,6 +1,7 @@
 import { LazyImage } from 'sections/app/components';
 import { useProductContext } from 'sections/product/hooks/useProductContext';
 import { ProductRate } from '.';
+import { formatPrice } from 'sections/app/utils/format';
 
 const ProductBestSellers = () => {
 	const { bestSellers } = useProductContext();
@@ -17,7 +18,7 @@ const ProductBestSellers = () => {
 							<div className='product-sell__info'>
 								<h5>{product.name}</h5>
 								<ProductRate rate={product.rate} />
-								<span>${`${product.price}.00`}</span>
+								<span>{formatPrice(product.price)}</span>
 							</div>
 						</li>
 					))}
