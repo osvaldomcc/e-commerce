@@ -4,7 +4,7 @@ import { Product } from 'modules/poduct/domain/Product';
 const getItemsFromArr = (arr: Product[], pick: number): Product[] => {
 	const items: Set<Product> = new Set();
 
-	while (items.size <= pick - 1) {
+	while (items.size < pick) {
 		const position = Math.floor(Math.random() * arr.length);
 		items.add(arr[position]);
 	}
