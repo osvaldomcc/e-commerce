@@ -1,12 +1,9 @@
-import { act, renderHook } from '@testing-library/react';
+import { act } from '@testing-library/react';
 
-import ProductProvider from 'sections/product/contexts/ProductContext';
 import { useProductContext } from 'sections/product/hooks/useProductContext';
+import { renderHook } from 'tests/utils/test-utils';
 
-const renderCustomHook = () =>
-	renderHook(useProductContext, {
-		wrapper: ({ children }) => <ProductProvider>{children}</ProductProvider>,
-	});
+const renderCustomHook = () => renderHook(useProductContext);
 
 describe('useProductContext', () => {
 	it('should has a product', () => {
